@@ -1,0 +1,28 @@
+.container{
+    container: CWind / inline-size;
+}
+.contents{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+   
+}
+
+.text{
+    font-size: 2rem !important;
+}
+
+@container CWind ( 200px > width > 100px  ) {
+    .text{
+        font-size: 2.5rem !important;
+    }
+    .contents{
+        flex-direction: column;
+    }
+}
+
+@container CWind ( min-width : 200px) {
+    .text{
+        font-size: 3rem !important;
+    }
+}

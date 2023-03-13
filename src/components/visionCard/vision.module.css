@@ -1,0 +1,38 @@
+.container{
+    container: CVision / inline-size;
+}
+.contents{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.text{
+    font-size: 2rem !important;
+}
+
+
+@container CVision (  width < 100px) {
+    .text{
+        font-size: 2rem !important;
+    }
+    .contents{
+        flex-direction: column;
+    }
+}
+
+@container CVision ( 200px > width > 100px) {
+    .contents{
+        flex-direction: column;
+    }
+    .text{
+        font-size: 2.5rem !important;
+    }
+}
+
+@container CVision (width > 200px) {
+    .text{
+        font-size: 3rem !important;
+    }
+}

@@ -1,0 +1,45 @@
+.card {
+    width: 100%;
+    height: 100%;
+    font-size: 1.2em;
+    overflow: hidden;
+    position: relative;
+    gap: 10px;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 200px 100px ;
+  }
+
+  .loading{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .container {
+    container: contentContainer / inline-size;
+  }
+
+  @container contentContainer (max-width: 400px) {
+    .contents{
+      display: grid;
+    }
+  }
+
+  .contents > div {
+    margin: 15px; 
+  }
+
+  .mainWheather{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .mainWheather img {
+    width: 30%;
+    height: auto;
+  }

@@ -1,0 +1,58 @@
+.layout{
+  min-height: 700px;
+  height: 100%;
+  width: 100%; 
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-auto-columns: 100%;
+  grid-template-rows: 100%;
+  padding: 20px 20px 0 20px;
+  /* padding-top: 20px; */
+
+  container: layout / inline-size;
+}
+
+
+.subcard{
+  /* border: 3px solid snow; */
+  border-radius: 5px;
+  height: 60%;
+  overflow: auto;
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  grid-template-rows: 100%;
+  /* gap: 20px; */
+  container: sublayout / inline-size;
+  /* padding: 0 20px; */
+}
+
+
+@container layout ( max-width : 709px) {
+  .subcard{
+    height:100%;  
+    grid-template-columns: 1fr;
+    grid-template-rows: 45% 55%; 
+  }
+}
+
+.not_permison_layout{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 7em;
+  height: 100%;
+  color: red;
+}
+
+
+/* card current */
+.contents{
+  border-radius: 25px;
+  background-color: var(--item-bg);
+  font-size: 2.5em;
+  padding: 2rem;
+  height: 100%;
+  line-height: 1.6;
+}
+
